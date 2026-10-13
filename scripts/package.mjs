@@ -5,7 +5,7 @@ import {root} from "./config.mjs";
 
 // ZIP store format with UTF-8 names. Only the explicitly allowed source tree is packaged.
 const dirs=["src","public","scripts","tests"];
-const files=["package.json","README.md","AGENTS.md","AI-INSTALL.md","LICENSE","START-HERE.html","wrangler.example.json","wrangler.local.json",".gitignore",".gitattributes"];
+const files=["package.json","README.md","BEGINNER-GUIDE.md","AGENTS.md","AI-INSTALL.md","LICENSE","START-HERE.html","wrangler.example.json","wrangler.local.json",".gitignore",".gitattributes"];
 const optional=["package-lock.json"];
 async function walk(dir){for(const entry of await readdir(join(root,dir),{withFileTypes:true})){const path=`${dir}/${entry.name}`;if(entry.isDirectory())await walk(path);else if(entry.isFile() && !entry.name.startsWith("."))files.push(path);}}
 for(const dir of dirs)await walk(dir);

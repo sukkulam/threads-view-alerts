@@ -1,5 +1,7 @@
 # Threads 조회수 알림 — 개인 서버 설치 설명서
 
+**처음 설치하나요? [초보자용 설명서: Codex 설치 → Cloudflare 배포 → 텔레그램 연결](https://github.com/sukkulam/threads-view-alerts/blob/main/BEGINNER-GUIDE.md)부터 따라 하세요.** 설치 화면, 입력할 값, Codex에 복사할 요청문, 단계별 완료 확인과 문제 해결을 담았습니다.
+
 이 패키지는 조회수 알림만 담은 독립 웹앱입니다. 받는 사람마다 **본인 Cloudflare 계정에 Workers 서버와 D1 데이터베이스를 만들고**, 자신의 이메일로 로그인해 자신의 Threads 계정과 텔레그램을 등록합니다. 패키지를 준 사람의 서버·데이터베이스·GPT 사용량을 사용하지 않습니다.
 
 하나의 개인 서버에 지인을 초대하는 것도 가능합니다. 서버 관리자가 허용한 이메일만 로그인하고, 앱에서는 사용자별로 등록 대상과 텔레그램 설정을 분리합니다. 그 경우 운영 사용량은 해당 서버 관리자 계정에 귀속됩니다. Cloudflare 계정 관리자는 데이터베이스를 관리할 수 있으므로 본인이 관리하는 서버에 설치하세요.
@@ -13,7 +15,7 @@
 ```
 https://github.com/sukkulam/threads-view-alerts
 
-이 저장소의 README.md, AGENTS.md, AI-INSTALL.md를 읽고
+이 저장소의 BEGINNER-GUIDE.md, README.md, AGENTS.md, AI-INSTALL.md를 읽고
 조회수 알림 앱을 내 Cloudflare 계정에 설치해줘.
 가능한 파일 준비, 설치, 검사, 설정, 배포 작업을 진행해줘.
 Cloudflare 로그인과 이메일 인증, 개인 봇 토큰 입력은 내가 직접 하도록 안내해줘.

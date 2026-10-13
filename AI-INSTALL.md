@@ -4,6 +4,8 @@
 
 공개 소스: [https://github.com/sukkulam/threads-view-alerts](https://github.com/sukkulam/threads-view-alerts)
 
+처음 설치하는 사용자에게는 [초보자용 설명서](https://github.com/sukkulam/threads-view-alerts/blob/main/BEGINNER-GUIDE.md)의 단계 번호에 맞춰 현재 사용자가 할 일을 안내하세요. Codex 설치·폴더 열기부터 설명하고, 실행 가능한 명령은 직접 수행하며 로그인·비밀 입력·실제 수신 확인이 필요한 지점을 구분합니다.
+
 ## 1. 실행 환경과 소스 준비
 
 - 현재 AI가 파일·명령 실행을 지원하면 공개 저장소를 새 폴더로 clone하거나 Code → Download ZIP으로 받습니다. 기존 사용자의 다른 앱 폴더를 덮어쓰지 않습니다.
