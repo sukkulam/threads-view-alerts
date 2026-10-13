@@ -6,6 +6,25 @@
 
 하나의 개인 서버에 지인을 초대하는 것도 가능합니다. 서버 관리자가 허용한 이메일만 로그인하고, 앱에서는 사용자별로 등록 대상과 텔레그램 설정을 분리합니다. 그 경우 운영 사용량은 해당 서버 관리자 계정에 귀속됩니다. Cloudflare 계정 관리자는 데이터베이스를 관리할 수 있으므로 본인이 관리하는 서버에 설치하세요.
 
+## 다른 사람에게 보낼 공유 문구
+
+GitHub에서 아래 블록 오른쪽 위의 복사 버튼을 누르면 링크와 설치 안내를 한 번에 복사할 수 있습니다. 메신저나 이메일에 그대로 붙여 넣으세요.
+
+```text
+Threads 조회수 알림 앱 공유합니다!
+설정한 조회수를 넘으면 텔레그램으로 알려줍니다.
+
+📌 GitHub
+https://github.com/sukkulam/threads-view-alerts
+
+📖 초보자용 설치 설명서
+https://github.com/sukkulam/threads-view-alerts/blob/main/BEGINNER-GUIDE.md
+
+설명서대로 Codex 설치 → 본인 Cloudflare에 배포 → 텔레그램 연결 순서로 진행하세요. Codex에 복사해서 보낼 설치 요청문도 들어 있습니다.
+
+각자 본인 계정으로 운영하며, 설치 후에는 컴퓨터를 꺼도 알림이 작동합니다.
+```
+
 ## 이 주소를 GPT/Codex에 전달해서 설치하기
 
 공개 저장소: [sukkulam/threads-view-alerts](https://github.com/sukkulam/threads-view-alerts)
