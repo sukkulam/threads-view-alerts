@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#133e34"><title>Threads 조회수 알림</title><link rel="icon" href="/icon.svg"><link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header class="topbar"><a class="brand" href="/"><img src="/icon.svg" alt="" width="34" height="34">조회수 알림 <span>THREADS</span></a><nav><a href="/help.html" target="_blank" rel="noopener">사용 설명서 ↗</a><a id="logout" href="/logout">로그아웃</a></nav></header>
+<main>
+<div class="intro"><div><p class="eyebrow">내 게시물의 다음 기회를 놓치지 않도록</p><h1>기준에 도달하면,<br>텔레그램으로 알려드릴게요.</h1><p class="muted">공개 Threads 계정을 등록하고 원하는 조회수를 설정하세요.</p></div><div class="identity"><span class="dot"></span><span id="user-email">로그인 확인 중…</span></div></div>
+<p id="local-banner" class="notice" hidden>로컬 미리보기입니다. 여기 등록한 내용은 이 컴퓨터의 테스트 데이터베이스에만 저장됩니다. 자동 확인은 배포 후 시작됩니다.</p>
+<div id="message" class="notice" role="status" aria-live="polite" hidden></div>
+<section class="stats" aria-label="확인 요약"><article><span>등록한 대상</span><strong id="count-targets">—</strong></article><article><span>확인 중인 게시물</span><strong id="count-posts">—</strong></article><article><span>기준에 도달한 게시물</span><strong id="count-reached">—</strong></article><article><span>텔레그램 연결</span><strong id="telegram-summary" class="small-value">확인 중</strong></article></section>
+<div class="layout">
+<div>
+<section class="panel"><div class="section-title"><div><p class="eyebrow">01 / 모니터링</p><h2>확인할 대상 등록</h2></div><span class="tag">사용자당 최대 10개</span></div>
+<form id="add-form"><label>Threads 계정 또는 게시물 주소<input name="target" placeholder="@계정명 또는 https://www.threads.com/@…" required maxlength="300" autocomplete="off"></label><div class="form-row"><label>알림 기준 조회수<input name="threshold" type="number" value="5000" min="1" max="1000000000" required></label><label>확인 주기<select name="interval"><option value="10">10분</option><option value="20">20분</option><option value="30" selected>30분</option><option value="60">60분</option></select></label><button type="submit" class="primary">대상 등록 +</button></div></form>
+<p class="hint">계정의 최신 원글을 발견하고 최대 20개 게시물을 추적합니다. 오래된 게시물은 주소로 직접 등록하세요.</p>
+</section>
+<section class="panel"><div class="section-title"><div><p class="eyebrow">LIVE WATCH</p><h2>내가 확인하는 대상</h2></div><button id="refresh" class="ghost" type="button">새로고침 ↻</button></div><div id="watches"><p class="empty">등록 정보를 불러오고 있습니다.</p></div></section>
+<section class="panel"><div class="section-title"><div><p class="eyebrow">LATEST POSTS</p><h2>최근 조회수</h2></div></div><div id="posts"><p class="empty">아직 확인한 게시물이 없습니다.</p></div></section>
+</div>
+<aside>
+<section class="panel telegram-panel"><p class="eyebrow">02 / 알림 받기</p><h2>내 텔레그램 연결</h2><ol class="steps"><li><a href="https://t.me/BotFather" target="_blank" rel="noopener">BotFather ↗</a>에서 <code>/newbot</code>으로 내 봇을 만드세요.</li><li>만든 봇의 대화를 열어 <code>/start</code>를 보내세요.</li><li>토큰을 넣고 대화 ID를 찾아 저장하세요.</li></ol>
+<form id="telegram-form"><label>봇 토큰<input id="telegram-token" name="telegramToken" type="password" placeholder="BotFather에서 받은 토큰" autocomplete="new-password" maxlength="200"></label><p class="hint" id="token-hint">저장한 토큰은 화면에 다시 표시하지 않습니다.</p><button id="find-chats" class="secondary full" type="button">내 대화 ID 찾기</button><div id="chat-choices" class="chat-choices"></div><label>대화 ID<input id="telegram-chat" name="telegramChatId" placeholder="찾은 대화를 선택하거나 직접 입력" autocomplete="off" maxlength="50" required></label><button class="primary full" type="submit">텔레그램 연결 저장</button></form>
+<div class="button-row"><button id="test-telegram" class="secondary" type="button">테스트 알림 보내기</button><button id="disconnect" class="ghost danger" type="button">연결 해제</button></div><p class="hint">개인 전용 봇을 사용하세요. 토큰은 이 서버에 암호화해 저장됩니다.</p>
+</section>
+<section class="panel soft"><h3>페이지를 닫아도 확인합니다.</h3><p>배포한 서버에서 설정한 주기에 따라 조회수를 확인합니다. 기준 이상일 때 같은 게시물·같은 기준·같은 대화에 한 번씩 알립니다.</p><p>공개 조회수를 읽지 못하면 이전 값을 유지하고 오류를 표시합니다.</p></section>
+</aside>
+</div><footer>공개 Threads 조회수 · 개인 서버에서 운영 · 10 / 20 / 30 / 60분 간격</footer>
+</main></body></html>

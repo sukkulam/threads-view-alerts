@@ -1,0 +1,9 @@
+node_modules/
+.wrangler/
+.setup/
+.env*
+.dev.vars*
+wrangler.json
+*.log
+releases/
+work/

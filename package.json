@@ -1,0 +1,19 @@
+{
+  "name": "threads-view-alerts",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/sukkulam/threads-view-alerts.git" },
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "configure": "node scripts/configure.mjs",
+    "dev": "wrangler dev --config wrangler.local.json --local --ip 127.0.0.1 --port 8791 --test-scheduled",
+    "deploy": "node scripts/deploy.mjs",
+    "secret:init": "node scripts/init-secret.mjs",
+    "guide": "node scripts/build-guide.mjs",
+    "package": "node scripts/package.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": { "wrangler": "4.92.0" }
+}
