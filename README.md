@@ -40,7 +40,7 @@ cd threads-view-alerts
 - 설치자 본인의 Cloudflare 계정과 이메일 수신이 가능한 주소.
 - [Node.js 공식 다운로드](https://nodejs.org/en/download)의 LTS 설치판. 권장 Node 24 LTS, 최소 22.13.
 - 텔레그램 앱. 각자 새로 만든 개인 전용 봇을 사용합니다.
-- Windows에서는 ZIP을 풀고 `threads-view-alerts` 폴더 안에서 시작합니다. `START-HERE.html`을 더블클릭하면 이 설명서를 볼 수 있습니다.
+- Windows에서는 ZIP을 풀고 **package.json이 있는 폴더**에서 시작합니다. 배포 ZIP은 `threads-view-alerts`, GitHub의 Code → Download ZIP은 보통 `threads-view-alerts-main` 폴더입니다. `START-HERE.html`을 더블클릭하면 이 설명서를 볼 수 있습니다.
 
 아래 명령은 Windows PowerShell 기준입니다. 탐색기에서 폴더의 빈 곳을 우클릭하고 **터미널에서 열기**를 선택하세요. macOS/Linux에서는 `npm.cmd`, `npx.cmd`를 각각 `npm`, `npx`로 바꾸면 됩니다.
 
